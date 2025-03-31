@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practice Exercise 2</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Who's Team will win this Intramurals?</h1>
+        <input type="text" class="form-control" id="intrams" placeholder="Blue Bears, Green Hornets, Yellow Tigers, Red Bulldogs">
+
+        <br>
+
+        <button type="submit" class="btn btn-secondary" onclick="ruby()">Show Me</button>  
+        <h1 id="show_here">Winning team is. . .</h1>
+
+    </div>
+    <script>
+        function ruby(){
+            var team = document.getElementById("intrams").value;
+            var result = "Invalid team name. Please enter a valid team.";
+            
+            if (team === 'Blue Bears') {
+                result = "Blue Bears fight fight grrr!";
+
+            } else if (team === 'Red Bulldogs') {
+                result = "R.E.D pula laban laban lang!";
+
+            } else if (team === 'Green Hornets') {
+                result = "Green Hornets sting with pride!";
+                
+            } else if (team === 'Yellow Tigers') {
+                result = "Yellow Tigers roar to victory!";
+            }
+            
+            document.getElementById("show_here").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
